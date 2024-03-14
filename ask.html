@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/preview.jpg">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="bg-grey-100 body-empty">
+
+	<header class="bg-white overflow-hidden">
+		<div class="container">
+			<div class="header-empty_content d-flex align-items-center justify-content-between py-md-3 py-2">
+				<a href="#" class="header-empty-logo">
+					<picture class="">
+					<source media="(max-width: 770px)" srcset="./images/headerLogoMob.svg" type="image/svg+xml">
+					<img src="./images/headerLogo.svg" alt="logo">
+					</picture>
+				</a>
+				<div class="header-empty_contact">
+					<a href="tel:+4959560880" class="header-tel">(495) 956-08-80</a>
+					<a data-bs-toggle="modal" href="javascript:void(0)" data-bs-target="#askQuestion" class="header-callback_item text-decoration-none text-green-hover">Задать вопрос</a>
+				</div>
+				<a href="#" class="header-card_title">
+					<svg class="header-card_icon" width="24" height="24">
+					<use xlink:href="./images/sprite.svg#personCircle"></use>
+					</svg>
+					Войти
+				</a>
+			</div>
+		</div>
+	</header>
+
+
+
+ 	<main class="py-sm-32 empty-full-bg" style="--bg: url('../images/bg/bgOne.png')">
+		<div class="container">
+			<div class="row ">
+				<div class="col-lg-7 col-md-10 col-12 mx-auto container-full">
+					<div class="card  px-29 py-32">
+						<div class="fs-28 fw-medium mb-1 text--gray-800">Задать вопрос</div>
+						<div class="mb-2 text--gray-800 fs-7 lh-160 d-flex flex-column gap-2">
+							<div class="">
+								Сопровождаемым клиентам Единого центра правовой поддержки «Ю-Софт» рекомендуем указать номер папки и ИНН организации для возможности использования дополнительных сервисов и оплаты услуг бонусными баллами.
+							</div>
+							<div class="">* - поля, обязательные для заполнения.</div>
+							
+						</div>
+
+						<div class="usoft-alert usoft-alert-success mb-2">
+							<div class="">
+								У вас сложности в авторизации, не получается ввести полученные данные?  <br>
+								При регистрации возникают проблемы? <br> Отправьте вопрос на Горячую линию, максимально подробно опишите проблему, по возможности приложите скриншот
+							</div>
+						</div>
+
+						<div class="usoft-alert usoft-alert-warning mb-3">
+							<svg class="" width="20" height="20">
+							<use xlink:href="./images/sprite.svg#exclamation"></use>
+							</svg>
+							<div class="">Не используйте данную форму для заказа документов или консультаций!</div>
+						</div>
+
+						<form class="row row-gap-2">
+							<div class="col-12">
+								<div class="form-item form-item-3 form-item form-item-3--error">
+									<label  class="form-label">ФИО*</label>
+									<input type="text" class="form-input">
+								</div>
+							</div >
+							<div class="col-xxl-10 col-md-9 col-sm-8 col-7">
+								<div class="form-item form-item-3">
+									<label  class="form-label">E-mail*</label>
+									<input type="email" class="form-input">
+								</div>
+							</div >
+							<div class="col-xxl-2 col-md-3 col-sm-4 col-5">
+								<div class="form-item form-item-3">
+									<label  class="form-label">Номер папки*</label>
+									<input type="text" class="form-input">
+								</div>
+							</div >
+							<div class="col-12 mt-2">
+								<div class="row">
+									<div class="form-item form-item-3">
+										<label class="form-label">Вопрос*</label>
+										<textarea name="" class="form-textarea"></textarea>
+									</div>
+								</div>
+								<label class="form-file my-2">
+									<input type="file" name="" id="" hidden="">
+									<svg class="flex-shrink-0" width="24" height="24">
+									<use xlink:href="./images/sprite.svg#file"></use>
+									</svg>
+										<span class="form-file_text">Прикрепить файл</span>
+								</label>
+								<div class="col-12">
+									<div class="usoft-alert usoft-alert-danger">
+										<svg class="" width="20" height="20">
+										<use xlink:href="./images/sprite.svg#exclamation"></use>
+										</svg>
+										<div class="">
+											Необходимо добавить следующую информацию:
+											<ul class="mb-0 ps-3">
+												<li>Необходимо заполнить поле «ФИО».</li>
+												<li>Необходимо заполнить поле «E-mail».</li>
+												<li>Необходимо заполнить поле «Номер папки».</li>
+												<li>Необходимо заполнить поле «Текст сообщения».</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-12">
+								<div class="row justify-content-center flex-column flex-sm-row align-items-center mt-2">
+									<div class="col-md-4 col-sm-5 align-self-center ask-capcha mb-4 mb-sm-0">
+										<img src="./images/temp/cap.png" alt="">
+									</div>
+									<div class="ask-capcha_input">
+										<div class="form-item form-item-3">
+											<label  class="form-label">Введите текст с картинки*</label>
+											<input type="text" class="form-input">
+										</div>
+										<button type="button" class="text-green-2 text-decoration-none text-inline-hover bg-transparent border-0 p-0 fs-9">Получить  новый код</button>
+									</div >
+								</div>
+							</div>
+
+
+							<div class="w-100 d-flex justify-content-sm-between align-sm-items-center mt-2 flex-column flex-sm-row align-items-start">
+								<div class="fs-9 lh-160 text-grey-700  ask-links">
+									Нажимая на кнопку, Вы даете <a href="#" class="text-green-2 text-decoration-none text-inline-hover">согласие на обработку своих персональных данных</a> и соглашаетесь с <a href="#" class="text-green-2 text-decoration-none text-inline-hover">политикой обработки персональных данных.</a>
+								</div>
+								<div class="d-flex align-items-center gap-2 align-self-sm-end mt-4 mt-sm-0">
+									<button type="button" class="usoft-btn-grey fs-9 text-capitalize py-2 ask-btns px-3">Отмена</button>
+									<button type="button" class="usoft-btn-green fs-9 text-capitalize py-2 ask-btns px-3">Проджолжить</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main> 
+	<footer class="bg-gray-dark py-4">
+		<div class="my-2">
+			<div class="container">
+				<div class="footer-top">
+					<nav class="footer-top_nav">
+						<ul class="list-unstyled d-flex flex-column mb-0">
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">Политика конфиденциальности</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">Согласие на обработку персональных данных</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">Консультант Плюс</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">СОУТ 2018</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">СОУТ 2019</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">СОУТ 2020</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">СОУТ 2021</a></li>
+							<li><a href="#" class="text-decoration-none text-white fs-9 fw-normal text-green-hover">СОУТ 2022</a></li>
+						</ul>
+					</nav>
+					<div class="text-gray-100 fs-9 footer-top_info">
+						<div class="fw-bold">Настоящий сайт является официальным сайтом Общества с ограниченной ответственностью «Информационно-сервисная компания Ю-Софт» (ИНН 7718129300).</div>
+						<div class="mt-2 fw-light">
+							<p class="mb-2">Наша компания осуществляет деятельность в области информационных технологий, включена в Реестр аккредитованных организаций, осуществляющих деятельность в области информационных технологий (номер в Реестре № 561, дата решения об аккредитации 08.12.2010)</p>
+						<p class="mb-2">Основной вид деятельности компании: адаптация, модификация и сопровождение Систем КонсультантПлюс (ОКВЭД 62.01, 63.11.1). СПС КонсультантПлюс зарегистрирована в едином реестре российских программ для электронных вычислительных машин и баз данных. Запись в реестре № 212 от 18.03.2016 произведена на основании Приказа Министерства цифрового развития, связи и массовых коммуникаций Российской Федерации от 18.03.2016 № 112.</p>
+						<p class="mb-2">Компания осуществляет и другие виды деятельности в области информационных технологий, а также оказывает дополнительные услуги.</p>
+						</div>
+					</div>
+					<div class="text-gray-100 fs-9 footer-top_data">
+						<div class="fw-bold">Общество с ограниченной ответственностью «Информационно-сервисная компания Ю-Софт»</div>
+						<div class="mt-2 fw-light d-grid row-gap-2">
+							<span>ИНН 7718129300</span>
+							<span>ОГРН 1027739097540</span>
+							<span>Адрес 107589, Г.МОСКВА, <br> ВН.ТЕР.Г.МУНИЦИПАЛЬНЫЙ ОКРУГ ГОЛЬЯНОВО, <br> УЛ.КРАСНОЯРСКАЯ, Д.17, ПОМЕЩ.15/1</span>
+							<span class="fw-bold">Телефон <a class="text-decoration-none text-gray-100" href="tel:(495) 956-08-80">(495) 956-08-80</a> </span>
+							<a class="fw-bold fs-9 text-green-2 text-decoration-skip-link-none" href="mailto:hot@usoft.ru">hot@usoft.ru</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bot">
+					<div class="footer-bot_left">
+						<a href="#" class="text-white text-decoration-none text-green-hover">© Единый центр правовой поддержки «Ю-Софт»</a>
+					</div>
+						<div class="">
+							<button type="button" class="usoft-btn-green px-4 py-3 ms-sm-1">Центр  контроля качества</button>
+						</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal fade" id="askQuestion" tabindex="-1"  aria-hidden="true">
+		<div class="modal-dialog modal-usoft-main">
+			<div class="modal-content modal-content-question">
+				<div class="overflow-auto">
+					<div class="container">
+						<div class="text--gray-800 fw-medium mb-0 lh-1 fs-3 mb-2 lh-sm">Заказ обратного звонка</div>
+						<div class="d-flex flex-column gap-2 fs-8-5 text--gray-800 mb-4">
+							<div>Оставьте ваш комментарий. Сотрудник «Горячей линии» перезвонит вам.</div>
+							<div>* - поля, обязательные для заполнения.</div>
+						</div>
+						<form>
+							<div class="row row-gap-2">
+								<div class="col-12">
+									<div class="form-item">
+										<label class="form-label">Ваш комментарий*</label>
+										<textarea name="" class="form-textarea"></textarea>
+									</div>
+								</div>
+								<div class="col-sm-4 col-12">
+									<div class="form-item mb-sm-2">
+										<label class="form-label">Ваше имя*</label>
+										<input type="text" class="form-input">
+									</div>
+								</div>
+								<div class="col-sm-4 col-12">
+									<div class="form-item mb-sm-2">
+										<label class="form-label">E-mail*</label>
+										<input type="email" class="form-input">
+									</div>
+								</div>
+								<div class="col-sm-4 col-12">
+									<div class="form-item mb-sm-2">
+										<label class="form-label">Номер телефона*</label>
+										<input type="tel" value="+7" class="form-input">
+									</div>
+								</div>
+								<div class="col-12 mt-2">
+									<div class="usoft-alert usoft-alert-grey mb-2">
+										<div class="">
+											Время работы «Горячей линии» с 9:30 до 18:30, кроме субботы, воскресенья и праздничных дней.
+										</div>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="row">
+										<span class="fs-9 col-sm-6">Нажимая на кнопку, Вы даете <a href="#" class="text-green-2 text-decoration-none text-inline-hover">согласие на обработку своих персональных данных </a>
+											и соглашаетесь с <a href="#" class="text-green-2 text-decoration-none text-inline-hover">политикой обработки персональных данных.</a></span>
+											
+											<div class="d-flex align-items-center align-self-sm-end gap-3 ms-sm-auto w-fit mt-4 mt-sm-0">
+												<button  data-bs-dismiss="modal" type="button" class="usoft-btn-grey fs-9 text-capitalize py-2 ask-btns px-3">Отмена</button>
+												<button type="button" class="usoft-btn-green fs-9 text-capitalize py-2 px-3">Проджолжить</button>
+											</div>
+
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="libs/bootstrap/bootstrap.bundle.min.js" defer></script>
+<script src="libs/choices/main.js" defer></script>
+<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+<script src="libs/tippyjs/popperj.js" defer></script>
+<script src="libs/tippyjs/tippy.js" defer></script>
+<script src="js/common.js" defer></script>
+
+</html>

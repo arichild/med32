@@ -1,0 +1,64 @@
+<div class="modal-content modal-recording modal-560">
+	<div class="modal-contact_faq">
+		<div class=" modal-recording_title">Задать вопрос</div>
+		<div class="modal-recording_footer">Наши администраторы ответят на любой интересующий вопрос по услуге</div>
+	</div>
+	<form class=" modal-recording_content" id="askModal">
+		<div class="row">
+			<div class="col-12 modal-recording_right">
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Ваше имя: <span class="form-label--required-star">*</span> </label>
+					<input type="text" class="field-control-area" name="name">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Телефон: <span class="form-label--required-star">*</span> </label>
+					<input type="tel" class="field-control-area" name="tel">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area"> E-mail: </label>
+					<input type="text" class="field-control-area" name="email">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Интересующая услуга: </label>
+					<input type="text" class="field-control-area" >
+				</div>
+				<div class="">
+					<div class="field-group-area">
+						<label for="" class="label-control-area">Сообщение: <span class="form-label--required-star">*</span> </label>
+						<textarea type="text" class="field-control-area" name="message" rows="1" ></textarea>
+					</div>
+					<label class="checkbox-label">
+						<input type="checkbox" name="year" id="" class="checkbox">
+						<span class="checkbox-decor"></span>
+						<div class="checkbox-text">Я согласен на <a href="#">обработку персональных данных</a></div>
+					</label>
+					<input type="text" name="clinic" hidden>
+				</div>
+			</div>
+		</div>
+		<button class="btn-default btn-default-empty modal-contact_send" type="submit">Отправить</button>
+	</form>
+	<script>
+		$( document ).ready(function() {
+			$("#askModal").validate({
+					rules: {
+						name: {
+							required: true,
+							lettersonly: true
+						},
+						email: {
+							email: true
+						},
+						message: {
+							required: true
+						},
+						tel: { phoneRU: true, required: true }
+					},
+
+					messages: {
+						email: 'Введите корректный email',
+					},
+				});
+		});
+	</script>
+</div>

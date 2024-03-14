@@ -1,0 +1,147 @@
+<div class="modal-content modal-recording modal-560">
+	<div class="modal-contact_faq">
+		<div class=" modal-recording_title">Запись онлайн</div>
+		<div class="modal-recording_footer">
+				<p>Вы можете самостоятельно записаться на приём к врачу, выбрав ближайший к вам медицинский центр, удобную дату посещения. </p>
+				<p>Для этого заполните форму, которая расположена ниже. </p>
+				<p>Если возникли сложности просим позвонить нам <br> по телефону: <a href="#">+7 (915) 809-03-03</a> </p>
+		</div>
+	</div>
+	<div class=" modal-recording_content">
+		<form action="#" class="form-validate">
+			<div class="row">
+				<div class="col-12 modal-recording_right">
+					<div class="field-group-area ">
+						<label for="name" class="label-control-area">ФИО:  <span class="form-label--required-star">*</span></label>
+						<input type="text" class="field-control-area" name="name">
+					</div>
+					<div class="field-group-area ">
+						<label for="tel" class="label-control-area">Контактный телефон:  <span class="form-label--required-star">*</span></label>
+						<input type="tel" class="field-control-area" name="tel">
+					</div>
+					<div class="field-group-area ">
+						<label for="email" class="label-control-area">E-mail:  </label>
+						<input type="text" class="field-control-area" name="email">
+					</div>
+					<div class="field-group-area ">
+						<label for="" class="label-control-area">Дата рождения: <span class="form-label--required-star">*</span> </label>
+						<input type="text" class="field-control-area" id="dateBirth" name="dateBirth">
+					</div>
+					<div class="custom-select">
+						<select name="" class="select-def style-select"  data-select-modal id="CityModalSelect">
+							<option value="" placeholder>Все города</option>
+
+						</select>
+					</div>
+					<select name="" class="select-def style-select"  data-select-modal disabled id="SkillModalSelect">
+						<option value="" placeholder>Выбрать специализацию: </option>
+
+					</select>
+					<select name="" class="select-def style-select"  data-select-modal disabled id="StaffModalSelect">
+						<option value="" placeholder>Выберите врача: </option>
+
+					</select>
+					<div class="field-group-area ">
+						<label for="" class="label-control-area">Комментарий: </label>
+						<input type="text" class="field-control-area">
+					</div>
+					<label class="checkbox-label">
+						<input type="checkbox" name="year" id="" class="checkbox">
+						<span class="checkbox-decor"></span>
+						<div class="checkbox-text">Я согласен на <a href="#">обработку персональных данных</a></div>
+					</label>
+				</div>
+			</div>
+			<button type="submit" class="btn-default btn-default-empty modal-contact_send">Отправить</button>
+		</form>
+	</div>
+
+	<script>
+		$( document ).ready(function() {
+			$(".form-validate").validate({
+					rules: {
+						name: {
+							required: true,
+							lettersonly: true
+						},
+						email: {
+							email: true
+						},
+						dateBirth: {
+							required: true
+						},
+						tel: {
+							phoneRU: true,
+							required: true
+						}
+					},
+
+					messages: {
+						email: 'Введите корректный email',
+					},
+				});
+
+				console.log(window.location.origin)
+
+				fetch(`${window.location.origin}/med32_new/data.json`)
+				.then(response => response.json())
+				.then(data => {
+					initializeApp(data);
+				});
+
+
+				let selectedCityData;
+				const citySelect = $('#CityModalSelect');
+				const specializationSelect = $('#SkillModalSelect');
+				const staffSelect = $('#StaffModalSelect');
+
+				function initializeApp(data) {
+					populateCitySelect(data.cities);
+
+					citySelect.change(function() {
+						const cityId = parseInt($('#CityModalSelect').val());
+
+						specializationSelect.find('option').slice(1).remove();
+						staffSelect.find('option').slice(1).remove();
+
+						selectedCityData = data.specializations.filter(specialization => specialization.citiesID === cityId);
+						populateSpecializationSelect(selectedCityData);
+						$('#SkillModalSelect').prop('disabled', false);
+					});
+
+					specializationSelect.change(function() {
+						const specializationId = parseInt($('#SkillModalSelect').val());
+						const selectedSpecialization = data.doctors.filter(doctor => doctor.specializationsID === specializationId);
+
+						populateStaffSelect(selectedSpecialization);
+						$('#StaffModalSelect').prop('disabled', false);
+					});
+				}
+
+				// Заполнение выпадающего списка городов
+				function populateCitySelect(cities) {
+					$.each(cities, function(index, city) {
+						citySelect.append(`<option value="${city.id}">${city.name}</option>`);
+					});
+				}
+
+				// Заполнение выпадающего списка специализаций
+				function populateSpecializationSelect(specializations) {
+					specializationSelect.find('option').slice(1).remove();
+
+					$.each(specializations, function(index, specialization) {
+						specializationSelect.append(`<option value="${specialization.id}">${specialization.name}</option>`);
+					});
+				}
+
+				// Заполнение выпадающего списка сотрудников
+				function populateStaffSelect(doctors) {
+					staffSelect.find('option').slice(1).remove();
+
+					$.each(doctors, function(index, doctor) {
+						staffSelect.append(`<option value="${doctor.id}">${doctor.name}</option>`);
+					});
+				}
+		});
+	</script>
+</div>

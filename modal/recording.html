@@ -1,0 +1,59 @@
+<div class="modal-content modal-recording modal-560">
+	<div class=" modal-recording_title">Запись онлайн</div>
+	<form class="modal-recording_content" id="modalForm">
+		<div class="row">
+			<div class="col-sm-4 modal-recording_left">
+				<img class="modal-recording_img" src="../images/temp/dea143ab8757f1c8524285b900df2375.jpg" alt="">
+				<a href="#" class="modal-recording_name">Кузнецов Владимир Михайлович</a>
+				<div class="modal-recording_position">Врач-акушер-гинеколог, гинеколог-эндокринолог</div>
+			</div>
+			<div class="col-sm-8 modal-recording_right">
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">ФИО <span class="form-label--required-star">*</span> </label>
+					<input type="text" class="field-control-area" name="name">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Контактный телефон: <span class="form-label--required-star">*</span> </label>
+					<input type="tel" class="field-control-area" name="tel">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area"> E-mail: </label>
+					<input type="text" class="field-control-area" name="email">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Дата рождения: <span class="form-label--required-star">*</span> </label>
+					<input type="text" class="field-control-area" id="dateBirth" name="dateBirth">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Выберите дату: </label>
+					<input type="text" class="field-control-area" id="day">
+				</div>
+				<div class="field-group-area ">
+					<label for="" class="label-control-area">Комментарий:</label>
+					<textarea  class="field-control-area"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="modal-recording_footer">Нажимая «Записаться» я подтверждаю, что даю согласие на обработку персональных данных и согласен с <a href="#">условиями политики конфиденциальности</a></div>
+		<button class="btn-default btn-default-empty  modal-recording_send" type="submit">Отправить</button>
+	</form>
+
+	<script>
+		$( document ).ready(function() {
+			$("#modalForm").validate({
+				rules: {
+					name: {
+						required: true,
+						lettersonly: true
+					},
+					dateBirth: {
+						required: true
+					},
+					tel: {
+						phoneRU: true,
+						required: true }
+				},
+			});
+		});
+	</script>
+</div>

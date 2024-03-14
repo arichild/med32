@@ -1,0 +1,1 @@
+[data-tabs=tab]{display:none}[data-tabs=tab].active{display:block}.absolute{position:relative}.absolute [data-tabs=tab]{position:absolute;left:0;right:0;opacity:0;pointer-events:none;display:block}.absolute [data-tabs=tab].active{z-index:1;opacity:1;pointer-events:all}

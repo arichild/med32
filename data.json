@@ -1,0 +1,66 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Москва"
+    },
+    {
+      "id": 2,
+      "name": "Смоленск"
+    }
+  ],
+  "specializations": [
+    {
+      "id": 1,
+      "name": "Терапевт",
+      "citiesID": 1
+    },
+    {
+      "id": 2,
+      "name": "Хирург",
+      "citiesID": 1
+    },
+    {
+      "id": 3,
+      "name": "Окулист",
+      "citiesID": 2
+    },
+    {
+      "id": 4,
+      "name": "Окулист",
+      "citiesID": 1
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Иван Иванов",
+      "specializationsID": 1
+    },
+    {
+      "id": 2,
+      "name": "Петр Петров",
+      "specializationsID": 1
+    },
+    {
+      "id": 3,
+      "name": "Мария Иванова",
+      "specializationsID": 2
+    },
+    {
+      "id": 4,
+      "name": "Сергей Петриченко",
+      "specializationsID": 3
+    },
+    {
+      "id": 5,
+      "name": "Божена Андреевна",
+      "specializationsID": 3
+    },
+    {
+      "id": 6,
+      "name": "Иван Иванов",
+      "specializationsID": 4
+    }
+  ]
+}
