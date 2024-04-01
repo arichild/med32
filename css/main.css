@@ -460,7 +460,6 @@ label.error{
 
 .ya-share2__item:hover .ya-share2__icon {
 	filter: brightness(0) invert(1) !important; /* Это изменит цвет на белый */
-
 }
 
 .ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__badge, .ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__mobile-popup-badge {
@@ -468,37 +467,37 @@ label.error{
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_vkontakte .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 52px 174px !important;
 	background-position: 0 2px !important;
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_odnoklassniki .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 52px 174px !important;
 	background-position: 0 -20px !important;
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_twitter .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 62px 198px !important;
 	background-position: 0 -45px !important;
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_viber .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 52px 174px !important;
 	background-position: 0 -122px !important;
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_whatsapp .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 52px 174px !important;
 	background-position: 0 -144px !important;
 }
 
 .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_moimir .ya-share2__icon {
-	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background: url("../images/sprite.svg") no-repeat !important;
 	background-size: 52px 173px !important;
 	background-position: 0 -100px !important;
 }
