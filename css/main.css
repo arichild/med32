@@ -409,13 +409,13 @@ label.error{
 	max-height: 100%;
 	border-radius: 3px;
 }
-.white-theme .social-list{
+.white-theme .ya-share2__list_direction_horizontal{
 	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
 	background-color: var(--white);
 	margin: 0;
 	border-radius: 3px;
 }
-.white-theme .social-list_link{
+.white-theme .ya-share2__link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -424,37 +424,107 @@ label.error{
 	color: var(--black-400);
 	border-radius: 3px;
 	transition: 0.3s color, 0.3s background-color;
-
 }
-.white-theme .social-list li:not(:first-of-type){
+.white-theme .ya-share2__list {
+	display: flex;
+	flex-direction: column;
+}
+.ya-share2__container_shape_round.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+	background-size: 26px 26px !important;
+}
+.ya-share2__container_size_m .ya-share2__badge .ya-share2__icon {
+	width: 26px !important;
+	height: 26px !important;
+}
+/* .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_vkontakte .ya-share2__icon {
+	background-image: url("../images/sprite.svg#vk") !important;
+} */
+
+/* .ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_moimir .ya-share2__icon {
+	background-image: url("../images/sprite.svg#mailru") !important;
+} */
+
+.white-theme .ya-share2__list li:not(:first-of-type){
 	border-top: 1px solid var(--grey-250);
 }
 .white-theme .social-list_link:hover{
 	color: var(--white);
 	background-color: var(--hover);
 }
-.social-list_vk{
-	--hover: #6695bd
+
+.ya-share2__item {
+	transition: background-color .2s ease, filter .2s ease;
+	border-radius: 3px;
+	margin: 0px !important;
 }
 
-.social-twitter{
-	--hover: #1baeeb
+.ya-share2__item:hover .ya-share2__icon {
+	filter: brightness(0) invert(1) !important; /* Это изменит цвет на белый */
+
 }
 
-.social-viber{
-	--hover: #665cac
+.ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__badge, .ya-share2__container.ya-share2__container_color-scheme_whiteblack .ya-share2__mobile-popup-badge {
+	background-color: transparent !important;
 }
 
-.social-whatsapp{
-	--hover: #46c152
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_vkontakte .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 52px 174px !important;
+	background-position: 0 2px !important;
 }
 
-.social-odnoklassniki{
-	--hover: #ff9205
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_odnoklassniki .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 52px 174px !important;
+	background-position: 0 -20px !important;
 }
 
-.social-mailru{
-	--hover: #168de2
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_twitter .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 62px 198px !important;
+	background-position: 0 -45px !important;
+}
+
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_viber .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 52px 174px !important;
+	background-position: 0 -122px !important;
+}
+
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_whatsapp .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 52px 174px !important;
+	background-position: 0 -144px !important;
+}
+
+.ya-share2__container_color-scheme_whiteblack .ya-share2__item_service_moimir .ya-share2__icon {
+	background: url("https://med-32.ru/bitrix/templates/aspro-medc2/images/svg/Social_Share.svg") no-repeat !important;
+	background-size: 52px 173px !important;
+	background-position: 0 -100px !important;
+}
+
+.ya-share2__item_service_vkontakte:hover{
+	background-color: #6695bd
+}
+
+.ya-share2__item_service_twitter:hover{
+	background-color: #1baeeb
+}
+
+.ya-share2__item_service_viber:hover{
+	background-color: #665cac
+}
+
+.ya-share2__item_service_whatsapp:hover{
+	background-color: #46c152
+}
+
+.ya-share2__item_service_odnoklassniki:hover{
+	background-color: #ff9205
+}
+
+.ya-share2__item_service_moimir:hover{
+	background-color: #168de2
 }
 
 .article-social_btn{
